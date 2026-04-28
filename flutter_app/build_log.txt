@@ -1,0 +1,241 @@
+[  +69 ms] executing: uname -m
+[   +7 ms] Exit code 0 from: uname -m
+[        ] x86_64
+[  +13 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[   +3 ms] executing: [/home/jalexfranca/development/flutter/] git -c log.showSignature=false log HEAD -n 1 --pretty=format:%ad --date=iso
+[   +9 ms] Exit code 0 from: git -c log.showSignature=false log HEAD -n 1 --pretty=format:%ad --date=iso
+[        ] 2026-04-24 13:54:45 -0700
+[  +16 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[  +44 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[  +13 ms] Skipping pub get: version match.
+[ +147 ms] Found plugin flutter_blue_plus at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus-2.2.1/
+[   +6 ms] Found plugin flutter_blue_plus_winrt at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_winrt-0.0.18/
+[   +6 ms] Found plugin flutter_blue_plus_web at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_web-8.2.1/
+[   +5 ms] Found plugin flutter_blue_plus_linux at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_linux-8.2.1/
+[  +12 ms] Found plugin flutter_blue_plus_darwin at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_darwin-8.2.1/
+[   +3 ms] Found plugin flutter_blue_plus_android at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_android-8.2.1/
+[  +86 ms] Found plugin flutter_blue_plus at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus-2.2.1/
+[   +1 ms] Found plugin flutter_blue_plus_winrt at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_winrt-0.0.18/
+[   +3 ms] Found plugin flutter_blue_plus_web at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_web-8.2.1/
+[   +3 ms] Found plugin flutter_blue_plus_linux at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_linux-8.2.1/
+[   +8 ms] Found plugin flutter_blue_plus_darwin at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_darwin-8.2.1/
+[   +2 ms] Found plugin flutter_blue_plus_android at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_android-8.2.1/
+[  +10 ms] Generating /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+[  +14 ms] Skipping generating GeneratedPluginRegistrant.java because it is up-to-date.
+[   +4 ms] Skipping generating generated_plugin_registrant.h because it is up-to-date.
+[   +1 ms] Skipping generating generated_plugin_registrant.cc because it is up-to-date.
+[   +1 ms] Skipping generating generated_plugins.cmake because it is up-to-date.
+[  +47 ms] Building Linux application...
+[   +7 ms] executing: [/home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/] cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DFLUTTER_TARGET_PLATFORM=linux-x64 /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux
+[ +653 ms] -- The CXX compiler identification is Clang 18.1.3
+[  +75 ms] -- Detecting CXX compiler ABI info
+[ +321 ms] -- Detecting CXX compiler ABI info - done
+[  +11 ms] -- Check for working CXX compiler: /usr/bin/clang++ - skipped
+[        ] -- Detecting CXX compile features
+[        ] -- Detecting CXX compile features - done
+[   +6 ms] -- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+[        ] -- Checking for module 'gtk+-3.0'
+[  +29 ms] --   Found gtk+-3.0, version 3.24.41
+[ +268 ms] -- Checking for module 'glib-2.0'
+[  +13 ms] --   Found glib-2.0, version 2.80.0
+[  +37 ms] -- Checking for module 'gio-2.0'
+[  +15 ms] --   Found gio-2.0, version 2.80.0
+[  +51 ms] -- Configuring done (1.5s)
+[  +12 ms] -- Generating done (0.0s)
+[   +8 ms] -- Build files have been written to: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release
+[  +14 ms] executing: ninja -C /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release install
+[  +26 ms] ninja: Entering directory `/home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release'
+[+31967 ms] [1/6] Generating /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/libflutter_linux_gtk.so, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_engine.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_method_call.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_method_response.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_value.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/fl_view.h, /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/linux/flutter/ephemeral/flutter_linux/flutter_linux.h, _phony_
+[        ] [  +63 ms] executing: uname -m
+[        ] [   +5 ms] Exit code 0 from: uname -m
+[        ] [        ] x86_64
+[        ] [  +11 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[        ] [  +11 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] [   +1 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] [  +61 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] [   +1 ms] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[        ] [  +33 ms] Initializing file store
+[        ] [  +32 ms] dart_build: Starting due to {}
+[        ] [   +2 ms] Skipping target: gen_localizations
+[        ] [   +2 ms] gen_dart_plugin_registrant: Starting due to {InvalidatedReasonKind.outputSetAddition: The following outputs were added to the output set: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/dart_plugin_registrant.dart, InvalidatedReasonKind.inputChanged: The following inputs have updated contents: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/package_config.json}
+[        ] [   +3 ms] unpack_linux: Starting due to {}
+[        ] [ +245 ms] unpack_linux: Complete
+[        ] [ +668 ms] No packages with native assets. Skipping native assets compilation.
+[        ] [   +3 ms] dart_build: Complete
+[        ] [   +1 ms] install_code_assets: Starting due to {}
+[        ] [   +4 ms] Writing native assets json to file:///home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/8dde1f647412fbf1c838d294045adac2/native_assets.json.
+[        ] [   +4 ms] Writing /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/8dde1f647412fbf1c838d294045adac2/native_assets.json done.
+[        ] [        ] install_code_assets: Complete
+[        ] [  +61 ms] Found plugin flutter_blue_plus at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus-2.2.1/
+[        ] [   +5 ms] Found plugin flutter_blue_plus_winrt at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_winrt-0.0.18/
+[        ] [   +5 ms] Found plugin flutter_blue_plus_web at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_web-8.2.1/
+[        ] [   +5 ms] Found plugin flutter_blue_plus_linux at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_linux-8.2.1/
+[        ] [  +12 ms] Found plugin flutter_blue_plus_darwin at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_darwin-8.2.1/
+[        ] [   +4 ms] Found plugin flutter_blue_plus_android at /home/jalexfranca/.pub-cache/hosted/pub.dev/flutter_blue_plus_android-8.2.1/
+[        ] [  +32 ms] Skipping generating dart_plugin_registrant.dart because it is up-to-date.
+[        ] [        ] gen_dart_plugin_registrant: Complete
+[        ] [   +2 ms] kernel_snapshot_program: Starting due to {}
+[  +14 ms] [  +11 ms] /home/jalexfranca/development/flutter/bin/cache/dart-sdk/bin/dartaotruntime /home/jalexfranca/development/flutter/bin/cache/dart-sdk/bin/snapshots/frontend_server_aot.dart.snapshot --sdk-root /home/jalexfranca/development/flutter/bin/cache/artifacts/engine/common/flutter_patched_sdk_product/ --target=flutter --no-print-incremental-dependencies -DFLUTTER_VERSION=3.41.8 -DFLUTTER_CHANNEL=stable -DFLUTTER_GIT_URL=https://github.com/flutter/flutter.git -DFLUTTER_FRAMEWORK_REVISION=02085feb3f -DFLUTTER_ENGINE_REVISION=59aa584fdf -DFLUTTER_DART_VERSION=3.11.5 -Ddart.vm.profile=false -Ddart.vm.product=true --delete-tostring-package-uri=dart:ui --delete-tostring-package-uri=package:flutter --aot --tfa --target-os linux --packages /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/package_config.json --output-dill /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/8dde1f647412fbf1c838d294045adac2/app.dill --depfile /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/8dde1f647412fbf1c838d294045adac2/kernel_snapshot_program.d --source file:///home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/dart_plugin_registrant.dart --source package:flutter/src/dart_plugin_registrant.dart -Dflutter.dart_plugin_registrant=file:///home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/dart_plugin_registrant.dart --verbosity=error package:linux_flutter_app/main.dart
+[   +1 ms] [+15373 ms] kernel_snapshot_program: Complete
+[   +1 ms] [ +666 ms] aot_elf_release: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: /home/jalexfranca/development/flutter/packages/flutter_tools/lib/src/build_system/targets/common.dart,/home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/8dde1f647412fbf1c838d294045adac2/app.dill,/home/jalexfranca/development/flutter/bin/cache/engine.stamp,/home/jalexfranca/development/flutter/bin/cache/engine.stamp,/home/jalexfranca/development/flutter/bin/cache/engine.stamp, InvalidatedReasonKind.outputSetAddition: The following outputs were added to the output set: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/8dde1f647412fbf1c838d294045adac2/app.so}
+[        ] [   +4 ms] targetingApplePlatform = false
+[        ] [        ] extractAppleDebugSymbols = true
+[        ] [        ] Will strip AOT snapshot during build.
+[        ] [   +1 ms] executing: /home/jalexfranca/development/flutter/bin/cache/artifacts/engine/linux-x64-release/gen_snapshot --deterministic --snapshot_kind=app-aot-elf --elf=/home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/8dde1f647412fbf1c838d294045adac2/app.so --strip /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/8dde1f647412fbf1c838d294045adac2/app.dill
+[        ] [+12812 ms] aot_elf_release: Complete
+[        ] [  +49 ms] linux_aot_bundle: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/.dart_tool/flutter_build/8dde1f647412fbf1c838d294045adac2/app.so, InvalidatedReasonKind.outputSetAddition: The following outputs were added to the output set: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/lib/libapp.so}
+[        ] [   +3 ms] linux_aot_bundle: Complete
+[        ] [  +43 ms] release_bundle_linux-x64_assets: Starting due to {}
+[   +1 ms] [ +135 ms] shaderc command: [/home/jalexfranca/development/flutter/bin/cache/artifacts/engine/linux-x64/impellerc, --sksl, --runtime-stage-gles, --runtime-stage-gles3, --runtime-stage-vulkan, --iplr, --sl=/home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/flutter_assets/shaders/ink_sparkle.frag, --spirv=/home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/flutter_assets/shaders/ink_sparkle.frag.spirv, --input=/home/jalexfranca/development/flutter/packages/flutter/lib/src/material/shaders/ink_sparkle.frag, --input-type=frag, --include=/home/jalexfranca/development/flutter/packages/flutter/lib/src/material/shaders, --include=/home/jalexfranca/development/flutter/bin/cache/artifacts/engine/linux-x64/shader_lib]
+[   +1 ms] [   +1 ms] shaderc command: [/home/jalexfranca/development/flutter/bin/cache/artifacts/engine/linux-x64/impellerc, --sksl, --runtime-stage-gles, --runtime-stage-gles3, --runtime-stage-vulkan, --iplr, --sl=/home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/flutter_assets/shaders/stretch_effect.frag, --spirv=/home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/flutter_assets/shaders/stretch_effect.frag.spirv, --input=/home/jalexfranca/development/flutter/packages/flutter/lib/src/material/shaders/stretch_effect.frag, --input-type=frag, --include=/home/jalexfranca/development/flutter/packages/flutter/lib/src/material/shaders, --include=/home/jalexfranca/development/flutter/bin/cache/artifacts/engine/linux-x64/shader_lib]
+[        ] [ +930 ms] release_bundle_linux-x64_assets: Complete
+[        ] [  +56 ms] Persisting file store
+[        ] [  +13 ms] Done persisting file store
+[        ] [  +36 ms] build succeeded.
+[        ] [        ] "flutter assemble" took 31.349ms.
+[        ] [  +26 ms] Running 1 shutdown hook
+[        ] [        ] Shutdown hooks complete
+[        ] [  +18 ms] exiting with code 0
+[ +785 ms] [2/6] Building CXX object runner/CMakeFiles/linux_flutter_app.dir/__/flutter/generated_plugin_registrant.cc.o
+[  +24 ms] [3/6] Building CXX object runner/CMakeFiles/linux_flutter_app.dir/main.cc.o
+[  +50 ms] [4/6] Building CXX object runner/CMakeFiles/linux_flutter_app.dir/my_application.cc.o
+[ +242 ms] [5/6] Linking CXX executable intermediates_do_not_run/linux_flutter_app
+[        ] [5/6] Install the project...
+[  +10 ms] -- Install configuration: "Release"
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/linux_flutter_app
+[        ] -- Set non-toolchain portion of runtime path of "/home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/linux_flutter_app" to "$ORIGIN/lib"
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/icudtl.dat
+[   +1 ms] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/lib/libflutter_linux_gtk.so
+[  +52 ms] -- Up-to-date: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/lib
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/FontManifest.json
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/packages
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/packages/cupertino_icons
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/packages/cupertino_icons/assets
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+[   +1 ms] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/NOTICES.Z
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/AssetManifest.bin
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/shaders
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/shaders/stretch_effect.frag
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/fonts
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/version.json
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/data/flutter_assets/NativeAssetsManifest.json
+[        ] -- Installing: /home/jalexfranca/Documentos/Code/ESP-IDF/wifi-ble-provisioner/linux_flutter_app/build/linux/x64/release/bundle/lib/libapp.so
+[  +19 ms] Building Linux application... (completed in 34,8s)
+[   +2 ms] ✓ Built build/linux/x64/release/bundle/linux_flutter_app
+[        ] "flutter linux" took 35.197ms.
+[  +28 ms] Running 1 shutdown hook
+[   +1 ms] Shutdown hooks complete
+[  +14 ms] exiting with code 0

@@ -1,0 +1,16 @@
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# Pastas de IDE e Editores (Globais)
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignorar lixo e logs globais
+*.log
+
+# O aplicativo Flutter e o Firmware ESP32 já possuem seus próprios .gitignore
+# dentro de suas respectivas pastas.

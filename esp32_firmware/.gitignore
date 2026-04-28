@@ -1,0 +1,15 @@
+# Diretórios de build e artefatos de compilação
+build/
+.cache/
+.clangd/
+
+# Dependências gerenciadas
+managed_components/
+dependencies.lock
+
+# Configurações antigas do menuconfig
+sdkconfig.old
+
+# (O arquivo sdkconfig normalmente É comitado se for a configuração base do produto,
+# mas caso você não queira versioná-lo, descomente a linha abaixo)
+# sdkconfig

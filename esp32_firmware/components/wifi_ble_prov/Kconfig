@@ -1,0 +1,17 @@
+menu "Wi-Fi BLE Provisioner Configuration"
+
+config PROV_CUSTOM_UUID
+    string "Custom BLE Provisioning UUID"
+    default ""
+    help
+        Custom 128-bit UUID for the BLE provisioning service.
+        Format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+        Example: 1775244d-6b43-439b-877c-060f2d9bed07
+        
+        If left empty, the ESP-IDF default UUID will be used 
+        (which is usually 021a9004-0382-4aea-bff4-6b3f1c5adfb4 or similar depending on IDF version).
+        
+        Changing this ensures your Flutter application will only find
+        your specific devices during the scanning phase.
+
+endmenu
