@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_blue_plus/flutter_blue_plus.dart';
+import 'package:universal_ble/universal_ble.dart';
 import 'package:ssme_esp_provisioning/ssme_esp_provisioning.dart';
 import 'package:network_info_plus/network_info_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'ble_transport.dart';
 
 class ProvisionScreen extends StatefulWidget {
-  final BluetoothDevice device;
-  final AdvertisementData advData;
+  final BleDevice device;
   
-  const ProvisionScreen({Key? key, required this.device, required this.advData}) : super(key: key);
+  const ProvisionScreen({Key? key, required this.device}) : super(key: key);
 
   @override
   _ProvisionScreenState createState() => _ProvisionScreenState();
@@ -38,12 +37,10 @@ class _ProvisionScreenState extends State<ProvisionScreen> {
   }
 
   String _extractPop() {
-    String name = widget.device.advName.isNotEmpty 
-        ? widget.device.advName 
-        : widget.advData.advName;
+    String name = widget.device.name ?? '';
     
     if (name.isEmpty) {
-      final macAddress = widget.device.remoteId.toString();
+      final macAddress = widget.device.deviceId;
       final parts = macAddress.split(':');
       if (parts.length == 6) {
         // O MAC do Wi-Fi (usado no PoP) costuma ser o MAC do BLE - 2 no ESP32!
@@ -290,7 +287,7 @@ class _ProvisionScreenState extends State<ProvisionScreen> {
             ),
             const SizedBox(height: 8),
             Text(
-              'Dispositivo: ${widget.device.remoteId}',
+              'Dispositivo: ${widget.device.deviceId}',
               style: Theme.of(context).textTheme.bodySmall,
               textAlign: TextAlign.center,
             ),

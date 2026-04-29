@@ -48,6 +48,9 @@ O aplicativo Flutter e o firmware do ESP32 precisam estar em perfeita sincronia:
 1. **No Firmware:** Defina o UUID usando `idf.py menuconfig` (aba *Wi-Fi BLE Provisioner Configuration*).
 2. **No Flutter:** Abra o arquivo `lib/config.dart` e atualize a variável `AppConfig.bleProvisioningUuid` com o exato mesmo valor.
 
+**Mapeamento Dinâmico dos Endpoints (Características):**
+Diferente de implementações frágeis baseadas no UUID padrão da Espressif, a nossa camada de transporte (`BleTransport`) é totalmente dinâmica. A biblioteca C do ESP-IDF (`protocomm_ble`) aloca as características do provisionamento (como `prov-scan`, `prov-session`) injetando sufixos estáticos de 16-bits (`0xFF4F` a `0xFF53`) especificamente nos **bytes 2 e 3** do seu Service UUID customizado. O código Dart do aplicativo reproduz essa exata mesma lógica, assegurando um pareamento perfeito independentemente do UUID Base escolhido pela sua empresa!
+
 ## Instruções para o Agente de IA (Codificação)
 Ao desenvolver as funcionalidades deste aplicativo, o agente deve seguir estritamente estas diretrizes:
 
@@ -76,19 +79,16 @@ Ao desenvolver as funcionalidades deste aplicativo, o agente deve seguir estrita
     flutter run -d linux
     ```
 
-## Aviso Importante sobre Licenciamento (Uso Comercial)
+## Aviso sobre Licenciamento e Biblioteca Bluetooth
 
-No projeto de exemplo (aplicativo desktop Linux) que utiliza o pacote `ssme_esp_provisioning`, a interface de abstração Bluetooth foi construída utilizando o plugin genérico **`flutter_blue_plus`**.
+Anteriormente, este projeto de exemplo utilizava os plugins genéricos **`flutter_blue_plus`**, que adotou um modelo de licenciamento comercial. 
 
-Recentemente, a biblioteca principal `flutter_blue_plus` **mudou seu modelo de licenciamento**. A partir de certas versões recentes (2.x+), eles adicionaram exigências de telemetria ou pagamento de licença comercial para aplicativos de código fechado. Como reflexo, os métodos de conexão requerem um parâmetro exato de licença (`license: License.free`), forçando o uso não comercial da biblioteca.
+Para garantir que este aplicativo de exemplo possa ser utilizado irrestritamente em produtos comerciais de código fechado e sem custo de licença, além de suportar a homologação real em ambiente Linux, a camada de transporte **foi migrada definitivamente para a [universal_ble](https://pub.dev/packages/universal_ble)**.
 
-### Alternativa Gratuita para Uso Comercial (MIT License)
-Como o pacote `ssme_esp_provisioning` conta com a interface genérica de transporte (`ProvTransport`), você **NÃO** é obrigado a usar o `flutter_blue_plus`! O provisionador em si continua sendo Apache/Open Source.
-
-Se você planeja lançar um aplicativo comercial e sem restrições de licença, é fortemente recomendado que você substitua o `flutter_blue_plus` no aplicativo. **A alternativa sugerida é o pacote [flutter_reactive_ble](https://pub.dev/packages/flutter_reactive_ble)**:
-* É coberto integralmente pela **Licença MIT** (livre para todo tipo de uso comercial, fechado ou open-source).
-* É robusto e muito estável na comunicação GATT (o que reduz problemas de `Operation failed with ATT error` e perda de conexão durante o handshake).
-* É facilmente integrável apenas reescrevendo o arquivo `ble_transport.dart` para estender `ProvTransport` usando as funções do novo plugin.
+A biblioteca `universal_ble`:
+* É coberta integralmente pela **Licença MIT** (livre para todo tipo de uso comercial, fechado ou open-source).
+* Possui suporte multiplataforma nativo genuíno (Linux Desktop via BlueZ, Windows, macOS, Android, iOS e Web).
+* Integrou-se perfeitamente estendendo a abstração `ProvTransport` do pacote `ssme_esp_provisioning`, onde mapeamos dinamicamente os endpoints da Espressif (0xFF4F a 0xFF53).
 
 ---
 ![SmartSensing.me Logo](https://smartsensing.me/ssme-logo.png)

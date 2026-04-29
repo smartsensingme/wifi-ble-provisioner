@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_blue_plus/flutter_blue_plus.dart';
+import 'package:universal_ble/universal_ble.dart';
 import 'package:flutter/foundation.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'provision_screen.dart';
@@ -41,69 +41,54 @@ class ScanScreen extends StatefulWidget {
 
 class _ScanScreenState extends State<ScanScreen> {
   bool _isScanning = false;
-  List<ScanResult> _scanResults = [];
+  List<BleDevice> _scanResults = [];
   final Set<String> _provisionedDevices = {};
-  late StreamSubscription<List<ScanResult>> _scanResultsSubscription;
 
   @override
   void initState() {
     super.initState();
     // Escuta continuamente a lista de resultados descobertos pelo adaptador
-    _scanResultsSubscription = FlutterBluePlus.scanResults.listen((results) {
+    UniversalBle.onScanResult = (result) {
       if (mounted) {
         setState(() {
-          // Deduplicar resultados por MAC (Linux BlueZ às vezes duplica eventos de scan)
-          final Map<String, ScanResult> uniqueResults = {};
-          for (var r in results) {
-            uniqueResults[r.device.remoteId.toString()] = r;
+          // Ocultar dispositivos que acabaram de ser provisionados com sucesso
+          if (_provisionedDevices.contains(result.deviceId)) {
+            return;
           }
 
-          _scanResults = uniqueResults.values.where((r) {
-            final name = r.device.advName.isNotEmpty 
-                ? r.device.advName 
-                : r.advertisementData.advName;
-            
-            // LOGS DE DEBUG REINSERIDOS
-            debugPrint('--- [BLE DETECTADO] MAC: ${r.device.remoteId} ---');
-            debugPrint('Nome: "$name"');
-            debugPrint('Service UUIDs: ${r.advertisementData.serviceUuids}');
-            debugPrint('Manufacturer Data: ${r.advertisementData.manufacturerData}');
-
-            // 1. Ocultar dispositivos que acabaram de ser provisionados com sucesso
-            if (_provisionedDevices.contains(r.device.remoteId.toString())) {
-              return false;
-            }
-
-            if (name.toUpperCase().contains('PROV')) {
-              return true;
-            }
-
-            // Filtro Definitivo para Linux (e outras plataformas):
-            // O serviço de provisionamento.
-            for (var uuid in r.advertisementData.serviceUuids) {
+          // Fallback por MAC (Útil para debugar no Linux quando o BlueZ "trava" o nome e os UUIDs)
+          bool isTarget = false;
+          String name = result.name ?? '';
+          
+          if (name.toUpperCase().contains('PROV')) {
+            isTarget = true;
+          } else if (result.deviceId.toUpperCase().startsWith('3C:DC:75')) {
+            isTarget = true;
+          } else if (result.services != null) {
+            for (var uuid in result.services!) {
               if (uuid.toString().toLowerCase() == AppConfig.bleProvisioningUuid.toLowerCase()) {
-                return true;
+                isTarget = true;
+                break;
               }
             }
-            
-            // Fallback por MAC (Útil para debugar no Linux quando o BlueZ "trava" o nome e os UUIDs)
-            if (r.device.remoteId.toString().toUpperCase().startsWith('3C:DC:75')) {
-              debugPrint('Achamos pelo MAC ${r.device.remoteId}, ignorando falta de UUID/Nome devido ao BlueZ!');
-              return true;
+          }
+          
+          if (isTarget) {
+            final index = _scanResults.indexWhere((r) => r.deviceId == result.deviceId);
+            if (index >= 0) {
+              _scanResults[index] = result;
+            } else {
+              _scanResults.add(result);
             }
-
-            return false;
-          }).toList();
+          }
         });
       }
-    }, onError: (e) {
-      debugPrint('Scan Subscription Error: $e');
-    });
+    };
   }
 
   @override
   void dispose() {
-    _scanResultsSubscription.cancel();
+    UniversalBle.stopScan();
     super.dispose();
   }
 
@@ -134,45 +119,20 @@ class _ScanScreenState extends State<ScanScreen> {
         }
       }
       
-      // Validar estado do BlueZ / Bluetooth do S.O.
-      final state = await FlutterBluePlus.adapterState.first;
-      if (state == BluetoothAdapterState.off) {
-        if (!mounted) return;
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('O Bluetooth (BlueZ) está desligado. Ative-o nas configurações do sistema.'),
-            backgroundColor: Colors.red,
-          ),
-        );
-        return;
-      } else if (state == BluetoothAdapterState.unauthorized) {
-        if (!mounted) return;
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Permissão Bluetooth não concedida.'),
-            backgroundColor: Colors.red,
-          ),
-        );
-        return;
-      }
-
       setState(() {
         _isScanning = true;
         _scanResults.clear();
       });
 
       // Em sistemas operacionais desktop é boa prática parar scanners pendentes
-      await FlutterBluePlus.stopScan();
+      UniversalBle.stopScan();
 
-      // Inicia a busca limitando o timeout e forçando o filtro no nível do adaptador
-      await FlutterBluePlus.startScan(
-        withServices: [Guid(AppConfig.bleProvisioningUuid)], // Filtro nativo configurável
-        timeout: const Duration(seconds: 15),
-        androidUsesFineLocation: true,
-      );
+      // Inicia a busca
+      UniversalBle.startScan();
 
-      // Trava visualmente o botão durante o timeout (usando o mesmo tempo)
+      // Trava visualmente o botão durante o timeout
       await Future.delayed(const Duration(seconds: 15));
+      UniversalBle.stopScan();
 
     } catch (e) {
       if (!mounted) return;
@@ -214,13 +174,11 @@ class _ScanScreenState extends State<ScanScreen> {
               itemCount: _scanResults.length,
               separatorBuilder: (context, index) => const Divider(height: 1),
               itemBuilder: (context, index) {
-                final result = _scanResults[index];
-                String deviceName = result.device.advName.isNotEmpty 
-                    ? result.device.advName 
-                    : result.advertisementData.advName;
+                final device = _scanResults[index];
+                String deviceName = device.name ?? '';
                 
-                final macAddress = result.device.remoteId.toString();
-                final rssi = result.rssi;
+                final macAddress = device.deviceId;
+                final rssi = device.rssi;
 
                 // Tratamento cosmético para o BlueZ
                 if (deviceName.isEmpty) {
@@ -246,13 +204,17 @@ class _ScanScreenState extends State<ScanScreen> {
                   isThreeLine: true,
                   trailing: const Icon(Icons.chevron_right),
                   onTap: () async {
-                    FlutterBluePlus.stopScan();
+                    UniversalBle.stopScan();
+                    if (!mounted) return;
+                    setState(() {
+                      _isScanning = false;
+                    });
+                    
                     final success = await Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => ProvisionScreen(
-                          device: result.device,
-                          advData: result.advertisementData,
+                          device: device,
                         ),
                       ),
                     );
@@ -262,7 +224,7 @@ class _ScanScreenState extends State<ScanScreen> {
                       setState(() {
                         _provisionedDevices.add(macAddress);
                         // Remove imediatamente da lista visível
-                        _scanResults.removeWhere((r) => r.device.remoteId.toString() == macAddress);
+                        _scanResults.removeWhere((r) => r.deviceId == macAddress);
                       });
                     }
                   },

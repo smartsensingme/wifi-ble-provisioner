@@ -45,9 +45,9 @@ Para o desenvolvimento assistido por IA, as seguintes diretrizes devem ser estri
 
 3. **Gatilhos de Hardware Dinâmicos:** No firmware, a inicialização do modo de provisionamento deve ocorrer caso nenhuma rede conhecida seja encontrada e mediante o acionamento de um botão físico (Long Press de 3 a 5 segundos). Os pinos de I/O não devem ser configurados de forma *hardcoded*, permitindo injeção de dependência na inicialização do componente para facilitar futuras trocas de hardware.
 
-4. **Estabilidade e Fallbacks:** O código focado em BLE deve prever tratamento robusto de exceções. Em ambientes hostis (como o BlueZ do Linux), o código deve prover fallbacks inteligentes (ex: filtrar pelo MAC caso o nome falhe). Comportamentos de UX também devem se adaptar à plataforma (ex: scan ativo no Linux vs Auto-preenchimento silencioso no Android).
+4. **Estabilidade, Mapeamento e Transporte:** O código focado em BLE utiliza a biblioteca `universal_ble` para suporte genuíno multiplataforma (incluindo Linux via BlueZ). O mapeamento dos descritores de provisionamento (endpoints) deve ignorar a leitura de nomes genéricos. Para evitar colisões (falsos positivos) com UUIDs customizados, o app deve reproduzir o comportamento exato do ESP-IDF em C: substituir os bytes 2 e 3 (índices 4 a 7 da string hexadecimal) do **Base UUID** pelos sufixos de 16-bits de cada endpoint (`0xFF4F` a `0xFF53`), garantindo um "casamento" estrito e dinâmico.
 
-5. **Casamento de UUIDs:** Para blindar o ecossistema, o Service UUID do modo de provisionamento não é hardcoded em lógicas obscuras. Ao criar um produto, o UUID DEVE ser alinhado usando as ferramentas oficias de cada ecossistema: `idf.py menuconfig` (no firmware) e `lib/config.dart` (no aplicativo Flutter).
+5. **Casamento de UUIDs (Isolamento):** Para blindar o ecossistema, o Service UUID do modo de provisionamento nunca deve ser assumido como o padrão de fábrica da Espressif. Ao criar um produto, o UUID DEVE ser alinhado usando as ferramentas oficiais de cada ambiente: `idf.py menuconfig` (no firmware) e `lib/config.dart` (no aplicativo Flutter). Toda a camada de transporte buscará as características injetando os sufixos de 16-bits diretamente nesse Base UUID. O handshake de segurança e envelopamento Protobuf continuam sendo estritamente gerenciados pelo pacote especializado `ssme_esp_provisioning`.
 
 ## Como Iniciar
 
